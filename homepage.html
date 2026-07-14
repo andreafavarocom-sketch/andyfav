@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Favaron</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@2/tsparticles.preset.links.bundle.min.js"></script>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <header>
+        <div class="header-content">
+            <img src="immagini/profile_image.jpeg" alt="Foto di Andrea" class="foto-profilo">
+            <div class="header-text">
+                <h1>Ciao, sono Andrea!</h1>
+                <p>Benvenuto nel mio angolo di web dove racconto i miei progetti e le mie attività</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Su di me</h2>
+        <p>Mi chiamo Andrea sono un perito informatico. Studio Fisica presso l'università statale di Milano e mi piace condividere il mio lavoro a scopo informativo e didattico.</p>
+        
+        <h2>Cosa faccio</h2>
+        
+        <div class="progetto">
+            <h3>💻 Sviluppo Web & Coding</h3>
+            <p>Attualmente sto lavorando allo sviluppo web dei siti e di tutta la loro parte di front-end e back-end</p>
+        </div>
+
+        <div class="progetto">
+            <h3>📚 Studio e Ricerca</h3>
+            <p>Condivido appunti, formule o riflessioni su argomenti che mi appassionano, come la matematica o la fisica.</p>
+        </div>
+
+        <h2>Contatti</h2>
+        <center><h2>Puoi trovarmi</h2></center>
+        <p>✉️ Email: <strong><a href="mailto:andreafavaro.com@gmail.com">andreafavaro.com@gmail.com</a></strong></p>
+        <p>🔗 Profilo Linkedin: <a href="https://www.linkedin.com/in/andrea-favaron-38329b1a0/" target="_blank">Linkedin</a></p>
+        <p>📞 Recapito telefonico: 3249547784</p>
+
+        <hr>
+
+        <h2>Le mie lezioni & raccolte</h2>
+        <div class="raccolte-container">
+            
+            <div class="riquadro-materia">
+                <img src="immagini/matematica.png" alt="Lezioni di Matematica" class="materia-img">
+                <div class="materia-info">
+                    <h3>Matematica</h3>
+                    <p>Raccolta di appunti, esercizi svolti e spiegazioni di algebra, analisi e geometria.</p>
+                    <a href="#" class="btn-raccolta">Vedi la raccolta</a>
+                </div>
+            </div>
+
+            <div class="riquadro-materia">
+                <img src="immagini/Fisica.png" alt="Lezioni di Fisica" class="materia-img">
+                <div class="materia-info">
+                    <h3>Fisica</h3>
+                    <p>Approfondimenti di meccanica, termodinamica ed elettromagnetismo con formule e grafici.</p>
+                    <a href="#" class="btn-raccolta">Vedi la raccolta</a>
+                </div>
+            </div>
+
+            <div class="riquadro-materia">
+                <img src="immagini/informatica.png" alt="Lezioni di Informatica" class="materia-img">
+                <div class="materia-info">
+                    <h3>Informatica</h3>
+                    <p>Guide pratiche alla programmazione, logica del codice e progetti di sviluppo web.</p>
+                    <a href="#" class="btn-raccolta">Vedi la raccolta</a>
+                </div>
+            </div>
+
+            <div class="riquadro-materia">
+                <img src="immagini/experiments.png" alt="esperimenti di fisica" class="materia-img">
+                <div class="materia-info">
+                    <h3>Esperimenti</h3>
+                    <p>Esperimenti fisici pratici che toccano fondamenti teorici</p>
+                    <a href="#" class="btn-raccolta">Vedi la raccolta</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        tsParticles.load("tsparticles", {
+            preset: "links",
+            background: {
+                color: "transparent" /* Sfondo trasparente per far vedere i colori cosmici in CSS */
+            },
+            particles: {
+                color: {
+                    value: ["#38bdf8", "#a78bfa", "#f472b6"] /* Stelle di vari colori cosmici: azzurro, viola, rosa */
+                },
+                links: {
+                    color: "#38bdf8",
+                    distance: 140,
+                    enable: true,
+                    opacity: 0.25,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.2
+                },
+                size: {
+                    value: { min: 1, max: 3.5 }
+                },
+                opacity: {
+                    value: { min: 0.3, max: 0.8 }
+                }
+            },
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "grab"
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

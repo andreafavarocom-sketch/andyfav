@@ -1,0 +1,222 @@
+/* Stile generale del corpo della pagina */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #f1f5f9; /* Testo chiaro per il tema scuro */
+    background-color: #0b0f19; /* Colore di fallback scuro */
+}
+
+/* Canvas delle particelle con gradiente cosmico animato */
+#tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Lo tiene dietro a tutti gli elementi */
+    top: 0;
+    left: 0;
+    
+    /* Gradiente con i colori del cosmo (blu profondo, indaco, viola, magenta scuro) */
+    background: linear-gradient(135deg, #05050d, #0b0f19, #1e1b4b, #2e1065, #3b0764, #030712);
+    background-size: 400% 400%;
+    animation: cosmicNebula 25s ease infinite;
+}
+
+/* Animazione fluida che sposta il gradiente simulando una nebulosa in movimento */
+@keyframes cosmicNebula {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* La banda scura dell'header (Glassmorphism leggero) */
+header {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 40px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Contenitore interno all'header */
+.header-content {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;      
+    justify-content: flex-start; 
+    gap: 30px;                
+    max-width: 800px;         
+    margin: 0 auto;           
+}
+
+.header-text h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.header-text p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+/* Rende l'immagine rotonda con bagliore cosmico */
+.foto-profilo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;       
+    object-fit: cover;        
+    border: 3px solid #38bdf8; /* Bordo azzurro spaziale */
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+/* Contenitore principale con effetto Vetro Sfocato (Glassmorphism spaziale) */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.65); /* Sfondo semitrasparentissimo */
+    backdrop-filter: blur(16px); /* Elevata sfocatura per far fondere la nebulosa */
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #38bdf8; /* Azzurro luminoso che richiama le stelle */
+    border-bottom: 2px solid rgba(56, 189, 248, 0.15);
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+/* Card dei progetti con effetto neon ultra soft */
+.progetto {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #a78bfa; /* Bordo viola/nebula */
+    border-radius: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-left-color 0.25s ease;
+}
+
+.progetto:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: #f472b6; /* Diventa rosa sfumato al passaggio */
+}
+
+.progetto h3 {
+    margin: 0 0 8px 0;
+    color: #f1f5f9;
+}
+
+.progetto p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+/* Sezione Raccolte/Materie */
+.raccolte-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.riquadro-materia {
+    flex: 1;
+    min-width: 220px; 
+    background: rgba(3, 7, 18, 0.5); /* Vetro scuro profondo */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.riquadro-materia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: rgba(167, 139, 250, 0.4); /* Bagliore viola */
+}
+
+.materia-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    filter: brightness(0.85) contrast(1.1); /* Ottimizzato per lo stile dark */
+}
+
+.materia-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.materia-info h3 {
+    margin: 0 0 10px 0;
+    color: #f1f5f9;
+}
+
+.materia-info p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    flex-grow: 1; 
+}
+
+/* Bottone per la raccolta stile sci-fi */
+.btn-raccolta {
+    display: inline-block;
+    text-align: center;
+    background: linear-gradient(135deg, #38bdf8, #a78bfa); /* Sfumatura stellare */
+    color: #0f172a;
+    padding: 10px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-raccolta:hover {
+    opacity: 0.9;
+}
+
+.btn-raccolta:active {
+    transform: scale(0.97);
+}
+
+/* Link e contatti */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #a78bfa;
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 40px 0;
+}
