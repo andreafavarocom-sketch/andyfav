@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storie Interessanti - Andrea</title>
+      <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bodystory">
+
+    <div class="containerstory">
+        <header class="headerstory">
+            <a href="homepage.html" class="back-link">← Torna alla Home</a>
+            <h1>Storia ed Eventi Interessanti</h1>
+            <p>Uomini, scoperte ed aneddoti che hanno rivoluzionato il nostro modo di vedere il mondo.</p>
+        </header>
+
+        <main class="stories-grid">
+            
+            <article class="story-card">
+                <img src="immagini/GalileoGalilei.png" alt="Galileo Galilei" class="story-image" id="open-by-img">
+                <div class="story-content">
+                    <h3>Galileo Galilei e la Luce</h3>
+                    <p>Galileo Galilei fu il primo a tentare di calcolare la velocità della luce</p>
+                    <button class="btn-read" id="open-by-btn">Leggi la storia</button>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <dialog id="story-modal">
+        <img src="immagini/GalileoGalilei.png" alt="Galileo Galilei" class="modal-imagestory">
+        <h2 class="modal-titlestory">Galileo Galilei e la Luce</h2>
+        <div class="modal-textstory">
+            <h3>Bio</h3>
+            <p>Galileo Galilei (1564–1642) è stato il fisico e astronomo toscano che ha rivoluzionato la scienza introducendo il metodo sperimentale moderno. Grazie al perfezionamento del cannocchiale, scoprì i crateri della Luna e i satelliti di Giove, accumulando le prove visive necessarie a sostenere la teoria copernicana, secondo cui la Terra gira intorno al Sole. Questa scoperta gli valse però la condanna da parte del Tribunale dell'Inquisizione nel 1633: per salvarsi la vita fu costretto ad abiurare le sue tesi, trascorrendo il resto dei suoi giorni agli arresti domiciliari.</p>
+            
+            <br>
+            <h3>Esperimento</h3>
+            <p>Il piano era semplice: il primo scopriva la sua lanterna e, non appena il secondo vedeva la luce, scopriva la propria. Galileo cercò di misurare il tempo di risposta, ma la distanza era troppo breve per la velocità della luce (che viaggia a circa 300.000 km/s!). Concluse che, sebbene l'esperimento non avesse rilevato un ritardo, la luce era comunque "straordinariamente veloce".</p>
+        </div>
+        <button class="btn-closestory" id="close-modal">Chiudi</button>
+    </dialog>
+
+    <script>
+        const modal = document.getElementById('story-modal');
+        const openBtn = document.getElementById('open-by-btn');
+        const openImg = document.getElementById('open-by-img');
+        const closeBtn = document.getElementById('close-modal');
+
+        // Apre il pop-up quando clicchi sul pulsante "Leggi la storia"
+        openBtn.addEventListener('click', () => {
+            modal.showModal();
+        });
+
+        // Apre il pop-up quando clicchi direttamente sull'immagine della card
+        openImg.addEventListener('click', () => {
+            modal.showModal();
+        });
+
+        // Chiude il pop-up quando clicchi su "Chiudi"
+        closeBtn.addEventListener('click', () => {
+            modal.close();
+        });
+
+        // Chiude il pop-up se si clicca fuori dal riquadro (sullo sfondo scuro)
+        modal.addEventListener('click', (e) => {
+            const dialogDimensions = modal.getBoundingClientRect();
+            if (
+                e.clientX < dialogDimensions.left ||
+                e.clientX > dialogDimensions.right ||
+                e.clientY < dialogDimensions.top ||
+                e.clientY > dialogDimensions.bottom
+            ) {
+                modal.close();
+            }
+        });
+    </script>
+
+</body>
+</html>
