@@ -1,6 +1,76 @@
-<html>
-<head></head>
-    <body>
-        <h1>La pagina è in fase di sviluppo</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Angolo di Fisica</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Angolo di Fisica</h1>
+            <p>Raccolta Appunti & Risorse di Andrea</p>
+        </header>
+
+        <div class="topic-box" id="topic-meccanica">
+            <div class="topic-title">📐 Meccanica & Cinematica</div>
+            <p style="padding: 0 15px; color: #666; font-size: 0.9em;">Vettori, Forze, Moto Rettilineo, Dinamica e Leggi di Newton.</p>
+            <ul class="file-list" id="list-meccanica"></ul>
+            <div class="upload-section">
+                <label class="upload-label">
+                    ➕ Carica PDF per Meccanica
+                    <input type="file" class="file-input" accept=".pdf" onchange="handleFileUpload(this, 'meccanica')">
+                </label>
+            </div>
+        </div>
+
+        <div class="topic-box" id="topic-termodinamica">
+            <div class="topic-title">🔥 Termodinamica</div>
+            <p style="padding: 0 15px; color: #666; font-size: 0.9em;">Calore, Temperatura, Gas Perfetti e Principi della Termodinamica.</p>
+            <ul class="file-list" id="list-termodinamica"></ul>
+            <div class="upload-section">
+                <label class="upload-label">
+                    ➕ Carica PDF per Termodinamica
+                    <input type="file" class="file-input" accept=".pdf" onchange="handleFileUpload(this, 'termodinamica')">
+                </label>
+            </div>
+        </div>
+
+        <div class="topic-box" id="topic-elettromagnetismo">
+            <div class="topic-title">⚡ Elettromagnetismo</div>
+            <p style="padding: 0 15px; color: #666; font-size: 0.9em;">Carica Elettrica, Campo Elettrico, Magnetismo ed Equazioni di Maxwell.</p>
+            <ul class="file-list" id="list-elettromagnetismo"></ul>
+            <div class="upload-section">
+                <label class="upload-label">
+                    ➕ Carica PDF per Elettromagnetismo
+                    <input type="file" class="file-input" accept=".pdf" onchange="handleFileUpload(this, 'elettromagnetismo')">
+                </label>
+            </div>
+        </div>
+
+        <div class="topic-box" id="topic-onde">
+            <div class="topic-title">🌊 Onde & Ottica</div>
+            <p style="padding: 0 15px; color: #666; font-size: 0.9em;">Fenomeni Ondulatori, Suono, Luce, Riflessione e Rifrazione.</p>
+            <ul class="file-list" id="list-onde"></ul>
+            <div class="upload-section">
+                <label class="upload-label">
+                    ➕ Carica PDF per Onde e Ottica
+                    <input type="file" class="file-input" accept=".pdf" onchange="handleFileUpload(this, 'onde')">
+                </label>
+            </div>
+        </div>
+
+        <div class="topic-box" id="topic-moderna">
+            <div class="topic-title">⚛️ Fisica Moderna & Relatività</div>
+            <p style="padding: 0 15px; color: #666; font-size: 0.9em;">Teoria della Relatività, Fisica Quantistica e Struttura dell'Atomo.</p>
+            <ul class="file-list" id="list-moderna"></ul>
+            <div class="upload-section">
+                <label class="upload-label">
+                    ➕ Carica PDF per Fisica Moderna
+                    <input type="file" class="file-input" accept=".pdf" onchange="handleFileUpload(this, 'moderna')">
+                </label>
+            </div>
+        </div>
+
+    </div>
+</body>
 </html>
