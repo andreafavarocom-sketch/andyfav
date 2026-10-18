@@ -100,17 +100,7 @@ h2 {
 }
 
 /* Card dei progetti con effetto neon ultra soft */
-.progetto {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 4px solid #a78bfa; /* Bordo viola/nebula */
-    border-radius: 8px;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    border-right: 1px solid rgba(255, 255, 255, 0.03);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    transition: transform 0.25s ease, background-color 0.25s ease, border-left-color 0.25s ease;
-}
+
 
 .progetto:hover {
     transform: translateY(-2px);
